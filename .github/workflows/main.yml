@@ -33,7 +33,7 @@ jobs:
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git clone https://hehe413:d7301a3a0fd7ee8420a23e0c7366f9c6e28b9c7b@github.com/hehe413/lets.git
+          git clone https://hehe413:${{ secrets.GITHUB_PAT }}@github.com/hehe413/lets.git
           cp lets/account.json .
           rm -rf lets
           git config --global user.email 403219317@qq.com
