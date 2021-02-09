@@ -28,11 +28,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      #- uses: actions/checkout@v2
         
-      - name: Run a multi-line script
-        run: |
-          rm -rf *
+      #- name: Run a multi-line script
+      #  run: |
+      #    rm -rf *
 
       - name: Checkout lets
         uses: actions/checkout@v2
@@ -60,7 +60,7 @@ jobs:
           git config --global user.email 403219317@qq.com
           git config --global user.name hehe413
           git add .
-          git commit -m "update" -a
+          git commit -m "update pages" -a
 
       - name: Push changes
         uses: ad-m/github-push-action@master
@@ -89,7 +89,7 @@ jobs:
           git config --global user.email 403219317@qq.com
           git config --global user.name hehe413
           git add .
-          git commit -m "update" -a
+          git commit -m "update lets" -a
 
       - name: Push changes
         uses: ad-m/github-push-action@master
