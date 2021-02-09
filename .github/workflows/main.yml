@@ -30,8 +30,6 @@ jobs:
         
       - name: Run a multi-line script
         run: |
-          mkdir ~/hehe
-          cp -rf * ~/hehe
           rm -rf *
 
       - name: Checkout lets
@@ -43,14 +41,19 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          ls
           pwd
-          ls ~/hehe
-          cp ./account.json ~/hehe
+          ls
+          cp ./account.json ~
           rm -rf *
-          cp -rf ~/hehe/* .
+      
+      - uses: actions/checkout@v2
+      
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
           pwd
-          ls
+          cp ~/account.json .
+          ls -al
           git config --global user.email 403219317@qq.com
           git config --global user.name hehe413
           git add .
