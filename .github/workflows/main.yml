@@ -52,6 +52,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           pwd
+          echo `date` > ./.tmp_file.txt
           cp ~/account.json .
           ls -al
           git config --global user.email 403219317@qq.com
